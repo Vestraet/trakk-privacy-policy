@@ -1,6 +1,6 @@
 # Politique de confidentialité – TRAKK
 
-**Dernière mise à jour : 20 avril 2026**
+**Dernière mise à jour : 22 août 2026**
 
 La présente Politique de confidentialité décrit la manière dont **TRAKK** collecte, utilise, conserve et protège les données personnelles des utilisateurs de l'application mobile TRAKK (ci-après « l'Application »).
 
@@ -64,6 +64,7 @@ Lors de l'inscription et de l'utilisation de l'Application, nous collectons :
 - **Données de diagnostic** : journaux de pannes, données de performance, temps de chargement
 - **Données d'utilisation** : pages consultées, fonctionnalités utilisées, interactions avec l'Application
 - **Métadonnées techniques** : type d'appareil, système d'exploitation, version de l'Application
+- **Identifiant publicitaire de l'appareil** (IDFA sur iOS, identifiant publicitaire Google sur Android), uniquement dans les conditions décrites à l'article 3.5
 
 ### 3.3 Données de localisation
 
@@ -82,6 +83,20 @@ L'Application peut utiliser la localisation **en arrière-plan** uniquement lors
 
 **Nous ne collectons ni ne stockons aucune donnée de paiement.** Les transactions relatives à l'abonnement TRAKK Premium sont exclusivement traitées par **Apple Inc.** via le système Apple In-App Purchase (StoreKit), conformément aux conditions d'utilisation d'Apple. Apple ne nous communique pas vos informations de paiement.
 
+
+### 3.5 Données de mesure d'audience et de publicité
+
+Depuis la version 1.0.4 de l'Application, deux outils de mesure sont utilisés :
+
+- **PostHog** (mesure d'audience) reçoit votre identifiant de compte TRAKK ainsi que les actions réalisées dans l'Application : ouverture de l'Application, fin du tutoriel, création d'une sortie, affichage et fermeture de la page d'abonnement, souscription d'un abonnement, et fonctionnalités utilisées.
+- **Le kit de développement Meta** (mesure publicitaire) reçoit l'identifiant publicitaire de votre appareil (IDFA sur iOS, identifiant publicitaire Google sur Android) ainsi que trois événements : inscription terminée, sortie créée, page d'abonnement affichée.
+
+**Aucune donnée de localisation, aucune photo, aucun contenu de sortie, aucun nom et aucune adresse e-mail ne sont transmis à ces deux outils.**
+
+Sur iOS, la collecte de l'identifiant publicitaire n'a lieu qu'après votre réponse à la demande d'autorisation de suivi affichée par le système d'exploitation. Vous pouvez revenir sur ce choix à tout moment dans Réglages → Confidentialité et sécurité → Suivi.
+
+Sur Android, cette collecte est active par défaut. Vous pouvez la limiter à tout moment dans Paramètres → Google → Annonces de votre appareil.
+
 ---
 
 ## 4. Finalités et bases légales du traitement
@@ -96,6 +111,8 @@ L'Application peut utiliser la localisation **en arrière-plan** uniquement lors
 | Modération du contenu et sécurité | Intérêt légitime (art. 6.1.f) |
 | Prévention de la fraude et des abus | Intérêt légitime (art. 6.1.f) |
 | Statistiques d'utilisation anonymisées | Intérêt légitime (art. 6.1.f) |
+| Mesure d'audience de l'Application (PostHog) | Intérêt légitime (art. 6.1.f) |
+| Mesure de l'efficacité des campagnes publicitaires (Meta) | Consentement (art. 6.1.a) sur iOS, recueilli via la demande d'autorisation de suivi du système ; intérêt légitime (art. 6.1.f) sur Android, avec possibilité de limitation dans les paramètres de l'appareil |
 | Respect des obligations légales | Obligation légale (art. 6.1.c) |
 | Gestion de l'abonnement Premium | Exécution du contrat (art. 6.1.b) |
 
@@ -115,6 +132,8 @@ Pour fournir l'Application, nous faisons appel à des sous-traitants techniques,
 | **Google Ireland Ltd (Sign-In)** | Connexion via compte Google | Union européenne et États-Unis | Clauses contractuelles types UE |
 | **Apple Distribution International Ltd** | Connexion via Apple ID, paiements In-App | Irlande et États-Unis | Clauses contractuelles types UE |
 | **Expo (650 Industries, Inc.)** | Notifications push, mises à jour de l'Application | États-Unis | Clauses contractuelles types UE |
+| **PostHog Inc. (PostHog Cloud EU)** | Mesure d'audience de l'Application | Union européenne | Données hébergées dans l'Union européenne, clauses contractuelles types UE |
+| **Meta Platforms Ireland Ltd** | Mesure de l'efficacité des campagnes publicitaires de TRAKK | Irlande et États-Unis | Clauses contractuelles types UE, certification Data Privacy Framework |
 
 ### 5.2 Transferts internationaux
 
@@ -126,7 +145,9 @@ Ces transferts sont encadrés par :
 
 ### 5.3 Absence de vente de données
 
-**Bati V-Project SRL ne vend, ne loue et ne cède aucune donnée personnelle à des tiers à des fins commerciales, publicitaires ou marketing.**
+**Bati V-Project SRL ne vend ni ne loue aucune donnée personnelle.**
+
+Les seules données transmises à des fins publicitaires le sont à Meta, uniquement pour mesurer l'efficacité des campagnes de promotion de TRAKK elle-même. Elles se limitent à l'identifiant publicitaire de votre appareil et à trois événements techniques (voir article 3.5). **Aucune donnée n'est cédée à un tiers pour lui permettre de vous adresser sa propre publicité.**
 
 ### 5.4 Communication à des tiers
 
@@ -308,8 +329,9 @@ L'Application mobile TRAKK n'utilise pas de cookies au sens strict (ceux-ci éta
 Cependant, certaines technologies similaires peuvent être utilisées :
 - **AsyncStorage** (stockage local sur l'appareil) : pour mémoriser votre session, vos préférences et mettre en cache les données hors ligne
 - **Identifiants d'appareil** (via Firebase) : pour assurer le bon fonctionnement et la sécurité de l'Application
+- **Identifiant publicitaire de l'appareil** : utilisé uniquement pour mesurer l'efficacité des publicités de TRAKK, dans les conditions décrites à l'article 3.5
 
-Ces technologies sont nécessaires au fonctionnement de l'Application.
+À l'exception de l'identifiant publicitaire, ces technologies sont nécessaires au fonctionnement de l'Application. L'identifiant publicitaire, lui, peut être refusé sur iOS et limité sur Android sans aucune conséquence sur le fonctionnement de l'Application.
 
 ---
 

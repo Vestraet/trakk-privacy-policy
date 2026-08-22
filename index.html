@@ -60,7 +60,7 @@
   <div class="wrap">
 
     <div class="meta">
-      <p style="margin:0 0 6px"><strong>Dernière mise à jour :</strong> 20 avril 2026 — Version 2.0</p>
+      <p style="margin:0 0 6px"><strong>Dernière mise à jour :</strong> 22 août 2026 — Version 2.1</p>
       <p style="margin:0">Document juridique officiel édité par Bati V-Project SRL.</p>
     </div>
 
@@ -110,6 +110,7 @@
       <li>Données de diagnostic : journaux de pannes, données de performance, temps de chargement</li>
       <li>Données d'utilisation : pages consultées, fonctionnalités utilisées, interactions avec l'Application</li>
       <li>Métadonnées techniques : type d'appareil, système d'exploitation, version de l'Application</li>
+      <li>Identifiant publicitaire de l'appareil (IDFA sur iOS, identifiant publicitaire Google sur Android), uniquement dans les conditions décrites à l'article 3.5</li>
     </ul>
 
     <h3>3.3 Données de localisation</h3>
@@ -128,6 +129,18 @@
     <h3>3.4 Données de paiement</h3>
     <p><strong>Nous ne collectons ni ne stockons aucune donnée de paiement.</strong> Les transactions relatives à l'abonnement TRAKK Premium sont exclusivement traitées par les plateformes Apple (Apple In-App Purchase / StoreKit) et Google (Google Play Billing), conformément à leurs conditions d'utilisation. Ces plateformes ne nous communiquent pas vos informations de paiement.</p>
 
+
+    <h3>3.5 Données de mesure d'audience et de publicité</h3>
+    <p>Depuis la version 1.0.4 de l'Application, deux outils de mesure sont utilisés :</p>
+    <ul>
+      <li><strong>PostHog</strong> (mesure d'audience) reçoit votre identifiant de compte TRAKK ainsi que les actions réalisées dans l'Application : ouverture de l'Application, fin du tutoriel, création d'une sortie, affichage et fermeture de la page d'abonnement, souscription d'un abonnement, et fonctionnalités utilisées.</li>
+      <li><strong>Le kit de développement Meta</strong> (mesure publicitaire) reçoit l'identifiant publicitaire de votre appareil (IDFA sur iOS, identifiant publicitaire Google sur Android) ainsi que trois événements : inscription terminée, sortie créée, page d'abonnement affichée.</li>
+    </ul>
+    <p><strong>Aucune donnée de localisation, aucune photo, aucun contenu de sortie, aucun nom et aucune adresse e-mail ne sont transmis à ces deux outils.</strong></p>
+    <div class="callout">
+      <p style="margin:0">Sur iOS, la collecte de l'identifiant publicitaire n'a lieu qu'après votre réponse à la demande d'autorisation de suivi affichée par le système d'exploitation. Vous pouvez revenir sur ce choix à tout moment dans Réglages → Confidentialité et sécurité → Suivi. Sur Android, cette collecte est active par défaut ; vous pouvez la limiter dans Paramètres → Google → Annonces.</p>
+    </div>
+
     <h2><span class="num">4.</span>Finalités et bases légales du traitement</h2>
     <table>
       <thead><tr><th>Finalité du traitement</th><th>Base légale (RGPD)</th></tr></thead>
@@ -140,6 +153,8 @@
         <tr><td>Modération du contenu et sécurité</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
         <tr><td>Prévention de la fraude et des abus</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
         <tr><td>Statistiques d'utilisation anonymisées</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+        <tr><td>Mesure d'audience de l'Application (PostHog)</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+        <tr><td>Mesure de l'efficacité des campagnes publicitaires (Meta)</td><td>Consentement (art. 6.1.a) sur iOS, recueilli via la demande d'autorisation de suivi du système ; intérêt légitime (art. 6.1.f) sur Android, avec possibilité de limitation dans les paramètres de l'appareil</td></tr>
         <tr><td>Respect des obligations légales</td><td>Obligation légale (art. 6.1.c)</td></tr>
         <tr><td>Gestion de l'abonnement Premium</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
       </tbody>
@@ -156,12 +171,14 @@
         <tr><td>Google Ireland Ltd (Sign-In)</td><td>Connexion via compte Google</td><td>UE et États-Unis</td><td>Clauses contractuelles types UE</td></tr>
         <tr><td>Apple Distribution International Ltd</td><td>Connexion via Apple ID, paiements In-App</td><td>Irlande et États-Unis</td><td>Clauses contractuelles types UE</td></tr>
         <tr><td>Expo (650 Industries, Inc.)</td><td>Notifications push, mises à jour de l'Application</td><td>États-Unis</td><td>Clauses contractuelles types UE</td></tr>
+        <tr><td>PostHog Inc. (PostHog Cloud EU)</td><td>Mesure d'audience de l'Application</td><td>Union européenne</td><td>Données hébergées dans l'Union européenne, clauses contractuelles types UE</td></tr>
+        <tr><td>Meta Platforms Ireland Ltd</td><td>Mesure de l'efficacité des campagnes publicitaires de TRAKK</td><td>Irlande et États-Unis</td><td>Clauses contractuelles types UE, certification Data Privacy Framework</td></tr>
       </tbody>
     </table>
     <h3>5.2 Transferts internationaux</h3>
     <p>Certains sous-traitants (notamment Firebase, Apple, Google) peuvent transférer et traiter vos données en dehors de l'Espace Économique Européen, notamment aux États-Unis. Ces transferts sont encadrés par les Clauses Contractuelles Types de la Commission européenne (décision d'exécution 2021/914) et par le cadre Data Privacy Framework (DPF) entre l'UE et les États-Unis, auquel Google et Apple adhèrent.</p>
     <h3>5.3 Absence de vente de données</h3>
-    <p>Bati V-Project SRL ne vend, ne loue et ne cède aucune donnée personnelle à des tiers à des fins commerciales, publicitaires ou marketing.</p>
+    <p>Bati V-Project SRL ne vend ni ne loue aucune donnée personnelle. Les seules données transmises à des fins publicitaires le sont à Meta, uniquement pour mesurer l'efficacité des campagnes de promotion de TRAKK elle-même ; elles se limitent à l'identifiant publicitaire de votre appareil et à trois événements techniques (voir article 3.5). <strong>Aucune donnée n'est cédée à un tiers pour lui permettre de vous adresser sa propre publicité.</strong></p>
     <h3>5.4 Communication à des tiers</h3>
     <p>Vos données peuvent être communiquées à des tiers en cas d'obligation légale (réquisition judiciaire, demande d'une autorité compétente), pour la protection de nos droits, de notre propriété ou de notre sécurité, ou pour la protection des droits, de la propriété ou de la sécurité des utilisateurs ou de tiers.</p>
 
@@ -216,7 +233,7 @@
     <p>TRAKK est destinée aux utilisateurs âgés d'au moins 13 ans. Conformément à l'article 8 du RGPD, les mineurs de moins de 13 ans ne sont pas autorisés à utiliser l'Application. Si nous apprenons qu'un compte a été créé par un mineur de moins de 13 ans, nous supprimerons ce compte et toutes les données associées sans délai. Pour les utilisateurs mineurs (13-17 ans), l'usage de l'Application est placé sous la responsabilité des titulaires de l'autorité parentale.</p>
 
     <h2><span class="num">12.</span>Cookies et technologies similaires</h2>
-    <p>L'Application mobile TRAKK n'utilise pas de cookies au sens strict (spécifiques aux navigateurs web). Cependant, certaines technologies similaires peuvent être utilisées : le stockage local sur l'appareil (AsyncStorage) pour mémoriser votre session, vos préférences et mettre en cache les données hors ligne ; et les identifiants d'appareil (via Firebase) pour assurer le bon fonctionnement et la sécurité de l'Application. Ces technologies sont nécessaires au fonctionnement de l'Application.</p>
+    <p>L'Application mobile TRAKK n'utilise pas de cookies au sens strict (spécifiques aux navigateurs web). Cependant, certaines technologies similaires peuvent être utilisées : le stockage local sur l'appareil (AsyncStorage) pour mémoriser votre session, vos préférences et mettre en cache les données hors ligne ; les identifiants d'appareil (via Firebase) pour assurer le bon fonctionnement et la sécurité de l'Application ; et l'identifiant publicitaire de l'appareil, utilisé uniquement pour mesurer l'efficacité des publicités de TRAKK dans les conditions décrites à l'article 3.5. À l'exception de l'identifiant publicitaire, ces technologies sont nécessaires au fonctionnement de l'Application. L'identifiant publicitaire, lui, peut être refusé sur iOS et limité sur Android sans aucune conséquence sur le fonctionnement de l'Application.</p>
 
     <h2><span class="num">13.</span>Modifications de la politique</h2>
     <p>Nous pouvons modifier la présente Politique de confidentialité, notamment pour refléter des évolutions réglementaires, de nouvelles fonctionnalités ou des modifications de nos sous-traitants. En cas de modification substantielle, nous vous informerons par une notification dans l'Application, par email (pour les modifications majeures) et par une mise à jour visible de la date en tête de document. La version en vigueur est celle disponible à l'adresse de publication officielle.</p>
@@ -243,7 +260,7 @@
 <footer>
   <div class="wrap">
     <p>© 2026 Bati V-Project SRL — Tous droits réservés.</p>
-    <p>TRAKK est une marque de Bati V-Project SRL. Dernière mise à jour : 20 avril 2026 — Version 2.0.</p>
+    <p>TRAKK est une marque de Bati V-Project SRL. Dernière mise à jour : 22 août 2026 — Version 2.1.</p>
   </div>
 </footer>
 
